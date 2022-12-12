@@ -849,14 +849,15 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
-	<script src="build/js/intlTelInput.js"></script>
+	<script src="js/input-tel/intlTelInput.min.js"></script>
 	<script>
 		const inputArr = Array.from(document.querySelectorAll("#phone"));
 		for (const input of inputArr) {
 			window.intlTelInput(input, {
 				separateDialCode: true,
+				autoPlaceholder: "polite",
 				preferredCountries: ['ru', 'kz', "ua"],
-				utilsScript: "build/js/utils.js",
+				utilsScript: "js/input-tel/utils.js",
 				customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
 					return selectedCountryPlaceholder.replace(/[0-9]/g, "x");
 				},

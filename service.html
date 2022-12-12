@@ -1509,6 +1509,7 @@
 		for (const input of inputArr) {
 			window.intlTelInput(input, {
 				separateDialCode: true,
+				autoPlaceholder: "polite",
 				preferredCountries: ['ru', 'kz', "ua"],
 				utilsScript: "js/input-tel/utils.js",
 				customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
