@@ -5378,6 +5378,7 @@ function actionForm(form) {
   let formBtn = form.querySelector("#form__button");
   formBtn.disabled = !currValue;
 }
+
 // Включение и отключения звука на странице. Подключение видео с ютуба
 const pageMuteBtn = document.querySelector(".page__sound");
 let tag = document.createElement("script");
@@ -5522,16 +5523,29 @@ if (sliderFeatured) {
     });
   });
 }
-// Cлайдер блока интро в портфоли и о нас
-const sliderIntro = document.querySelector(".slider-intro");
+// Cлайдер блока интро в портфоли
+const sliderIntro = document.querySelector(".slider-portfolio");
 if (sliderIntro) {
   $(document).ready(function () {
-    $(".slider-intro").slick({
+    $(".slider-portfolio").slick({
       dots: false,
       infinite: true,
       autoplay: false,
       autoplaySpeed: 3000,
       slidesToShow: 1,
+      arrows: true,
+    });
+  });
+}
+const sliderIntroAbout = document.querySelector(".slider-intro-about");
+if (sliderIntroAbout) {
+  $(document).ready(function () {
+    $(".slider-intro-about").slick({
+      dots: false,
+      infinite: true,
+      autoplay: false,
+      autoplaySpeed: 3000,
+      slidesToShow: 3,
       arrows: true,
     });
   });

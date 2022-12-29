@@ -10572,15 +10572,16 @@ just for appearance; change whatever you want
 .wraper_line_prop_triger {
 	box-sizing: border-box;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(calc(25% - 15px), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(calc(25% - 15px), 1fr));
 	gap: 20px;
-	align-items: stretch;
-	justify-content: space-between;
 	background: linear-gradient(180deg, #882A48 0%, #EE2277 100%);
 	border-radius: 31px;
 	padding: 18px 18px;
 	max-width: 1164px;
 	margin: 0 auto;
+}
+.wraper_line_prop_triger.eight-items{
+
 }
 .item_triger {
 	box-sizing: border-box;
@@ -10588,7 +10589,6 @@ just for appearance; change whatever you want
 	border-radius: 31px;
 	padding: 21px 15px 66px 15px;
 	display: flex;
-	flex: 1 1 25%;
 	flex-direction: column;
 	align-items: center;
 	transition: all 0.3s ease;
@@ -10816,10 +10816,6 @@ just for appearance; change whatever you want
 		padding: 8px 8px;
 		width: 100%;
 	}
-	.item_triger {
-		padding: 15px 10px;
-		width: 190px;
-	}
 	.left_img_prop {
 		margin-left: 0;
 		width: 100%;
@@ -10843,9 +10839,6 @@ just for appearance; change whatever you want
 		width: 147.48px;
 		height: 149px;
 		margin-bottom: 20px;
-	}
-	.item_triger {
-		width: 150px;
 	}
 	.slider-project__image {
 		flex: 0 0 350px;
@@ -10893,9 +10886,9 @@ just for appearance; change whatever you want
 	.wrap_btn_port{
 		margin: 0px;
 	}
-	.item_triger {
-		width: 95%;
-		margin-bottom: 20px;
+	.wraper_line_prop_triger{
+		justify-content: center;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	}
 }
 /* 320px - 576px */
@@ -11271,10 +11264,6 @@ just for appearance; change whatever you want
 		width: 100%;
 		padding: 0;
 	}
-	.tr_ser {
-		width: 170px;
-		height: 211px;
-	}
 	.tr_ser_cir {
 		width: 111px;
 		height: 111px;
@@ -11386,9 +11375,6 @@ just for appearance; change whatever you want
 	.buy_sec_h2 {
 		width: 100%;
 	}
-	.tr_ser {
-		width: 146px;
-	}
 	.opis_trig_port {
 		font-size: 18px;
 	}
@@ -11448,18 +11434,10 @@ just for appearance; change whatever you want
 		flex-direction: column;
 		width: 100%;
 	}
-	.tr_ser {
-		width: 100%;
-		margin: 0;
-		margin-bottom: 20px;
-	}
 	.title_descriptor {
 		font-weight: 500;
 		font-size: 30px;
 		margin-bottom: 15px;
-	}
-	 .tr_ser{
-		width: 469px;
 	}
 	.wpaer_buy_num {
 		flex-direction: column;
@@ -11504,9 +11482,6 @@ just for appearance; change whatever you want
 	.opis_block_keys {
 		font-weight: 400;
 		font-size: 18px;
-	}
-	.tr_ser {
-		width: 90%;
 	}
 	.block_left_works, .wraper_line_o {
 		width: 100%;
@@ -12025,13 +12000,17 @@ button.owl-next_1>span {
 /* Слайдер интро(общие стили) */
 .slider-intro{
 	height: 100%;
-	width: 100%;
+	width: 99%;
 	min-width: 0px;
+	overflow: hidden;
 }
 .slider-intro .slick-list{
 	position: relative;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
+    margin-left: -3px;
+    margin-right: -3px;
 }
 .slider-intro .slick-track{
 	position: relative;
@@ -12065,17 +12044,17 @@ button.owl-next_1>span {
 .slider-intro-about__content{
 	position: relative;
 }
-.slider-intro-about__content::after{
+.slider-intro-about__content:nth-child(odd):after{
 	content: '';
 	position: absolute;
 	width: 2px;
 	height: 100%;
 	top: 0;
-	right: -200%;
-	transform: translate(200%, 0);
+	right: -130%;
+	transform: translate(130%, 0);
 	background: linear-gradient(180deg, #882A48 0%, #EE2277 100%);
 }
-.slider-intro-about__content:last-child:after{
+/* .slider-intro-about__content:last-child:after{
 	content: '';
 	position: absolute;
 	width: 2px;
@@ -12084,6 +12063,12 @@ button.owl-next_1>span {
 	right: -200%;
 	transform: translate(200%, 0);
 	background: none;
+} */
+.slider-intro-about__item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 /* Слайдер ваканасии */
 .slider-vakancy{
