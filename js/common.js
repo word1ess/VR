@@ -5308,7 +5308,10 @@ function initMap() {
     map.setOptions({ styles: data });
   });
 }
-window.initMap = initMap;
+const map = document.querySelector(".map");
+if (map) {
+  window.initMap = initMap;
+}
 // Проверка и логика для формы
 
 function actionForm(form) {
@@ -5446,7 +5449,7 @@ if (sliderSteps) {
     $(".slider-steps").on(
       "beforeChange",
       function (event, slick, currentSlide, nextSlide) {
-        $(".slider__num").text(`0${currentSlide + 1}`);
+        $(".slider__num").text(`0${nextSlide + 1}`);
       }
     );
   });
@@ -5501,7 +5504,7 @@ if (sliderFeatured) {
       dots: false,
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 30000000,
       slidesToShow: 3,
       arrows: true,
       responsive: [
