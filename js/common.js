@@ -5416,7 +5416,6 @@ if (pageMuteBtn) {
   }
 
   function onPlayerReady(event) {
-    //event.target.mute();
     event.target.setVolume(20);
     event.target.playVideo();
   }
